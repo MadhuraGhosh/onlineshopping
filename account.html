@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - FASHION</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" width="180px">
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">product</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="account.html">account</a></li>
+
+                </ul>
+
+            </nav>
+            <a href="cart.html"><img src="bag-icon-png-7.jpg" width="30px" height="30px"></a>
+            <img src="menu-2.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+
+
+
+
+        <!-------account--page--------->
+
+        <div class="account-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="logo.png" width="100%">
+                    </div>
+                    <div class="col-2">
+                        <div class="form-container">
+                            <div class="form-btn">
+                                <span onclick="login()">Login</span>
+                                <span onclick="register()">Register</span>
+                                <hr id="Indicator">
+                            </div>
+                            <form id="login-form">
+                                <input type="text" placeholder="User-name">
+                                <input type="password" placeholder="password">
+                                <button type="submit" class="btn">Login</button>
+                                <a href="">Forget password</a>
+                            </form>
+
+                            <form id="Registration-form">
+                                <input type="text" placeholder="User-name">
+                                <input type="email" placeholder="Email">
+                                <input type="password" placeholder="password">
+                                <button type="submit" class="btn">Register</button>
+
+                            </form>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-------footer------>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download Our App on Android and ios mobile</p>
+                        <div class="app-logo">
+                            <img src="play-store-logo.jpg">
+                            <img src="app-store-logo.jpg">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="logo.png">
+                        <p> India’s no. 1 online fashion destination justifies its fashion relevance by bringing
+                            something new and chic to the table on the daily.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col-4">
+                        <h3>Follow us on </h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                            <li>Twitter</li>
+                            <li>YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">No copyright</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!---------js for toggle menu------>
+
+        <script>
+            var menuItems = document.getElementById("menuItems");
+            menuItems.style.maxHeight = "0px";
+            function menutoggle() {
+                if (menuItems.style.maxHeight == "0px") {
+                    menuItems.style.maxHeight = "200px";
+                }
+                else {
+                    menuItems.style.maxHeight = "0px";
+                }
+
+            }
+        </script>
+
+
+
+<!-----js--for---toggle--form----->
+
+<script>
+    var loginform = document.getElementById("login-form");
+    var registrationform = document.getElementById("Registration-form");
+    var indicator = document.getElementById("Indicator");
+
+    function register(){
+        registrationform.style.transform = "translateX(0px)";
+        loginform.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+    }
+
+    function login(){
+        registrationform.style.transform = "translateX(300px)";
+        loginform.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+    }
+
+
+
+</script>
+
+</body>
+
+</html>
